@@ -3,7 +3,9 @@ package com.example.ticketing_demo.order.service;
 import com.example.ticketing_demo.ticket.model.Ticket;
 import com.example.ticketing_demo.user.model.Level;
 import com.example.ticketing_demo.user.model.User;
+import org.springframework.stereotype.Component;
 
+@Component
 public class VariableDiscountPolicy implements DiscountPolicy{
     private final int DISCOUNT_RATE = 10;
     @Override
