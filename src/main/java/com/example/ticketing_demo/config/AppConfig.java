@@ -11,6 +11,7 @@ import com.example.ticketing_demo.user.service.UserServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+// Bean: spring이 관리하는 java class. dependency injection을 해줘야 하면 스프링이 관리하는 클래스여야 하는데 스프링이 관리하는 클래스가 빈
 @Configuration
 public class AppConfig {
     @Bean
@@ -37,7 +38,7 @@ public class AppConfig {
     public OrderService orderService() {
         return new OrderServiceImpl(userService(), discountPolicy());
     }
-
-
-
 }
+
+// 싱글톤: 스레드환경에서 싱크로나이즈 관리하는 바업ㅂ
+//
