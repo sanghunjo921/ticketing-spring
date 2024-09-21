@@ -1,11 +1,14 @@
 package com.example.ticketing_demo.user.repo;
 
 import com.example.ticketing_demo.user.model.User;
+import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+// 실제 구현체에 component 달아야함
+@Component
 public class MemUserRepository implements UserRepository{
     private static Map<Integer, User> map = new HashMap<>();
 
